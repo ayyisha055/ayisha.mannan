@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayisha Mannan · creative computing</title>
+    <!-- LOGO -->
+    <link rel="shortcut icon" type="image/x-icon" href="ayisha.mannan/am.png">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- Locomotive Scroll -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <!-- Map library -->
@@ -317,19 +319,31 @@
         .social-icon:hover i {
             transform: scale(1.1);
         }
-        
-        .resume {
-            font-size: 1.1rem;
-            color: #ffffff;
-            margin-top: 15px;
-            font-weight: 500;
+
+        .resume-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(173, 70, 62, 0.1);
+            border: 1px solid rgba(173, 70, 62, 0.3);
+            border-radius: 50px;
+            color: #fff;
             text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
             transition: all 0.3s ease;
         }
-        
-        .resume:hover {
-            color: #AD463E;
+
+        .resume-btn:hover {
+            background: #AD463E;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(173, 70, 62, 0.3);
         }
+
+        .resume-btn i {
+            font-size: 1rem;
+        }   
 
         /* Hero image */
         .hero-image {
@@ -1467,13 +1481,14 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="social-icons">
                             <a href="https://www.instagram.com/aree.shh055/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
                             <a href="https://github.com/ayisha33mannan" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/ayisha-mannan" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon" download ><i class="fa-solid fa-download"></i></a> 
-                            <span class="resume">Download Resume</span>
+                            <a href="https://www.canva.com/design/DAHBpWtpLFs/kLoLp0RN8u9t_9rnGaMn0g/view?utm_content=DAHBpWtpLFs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb406ecc79e" target="_blank" class="resume-btn" download>
+                                <i class="fa-solid fa-download"></i>
+                                <span>Resume</span>
+                            </a>
                         </div>
 
                         <div class="location-badge" data-scroll data-scroll-speed="0.5">
@@ -1849,10 +1864,10 @@
                     <!-- Certificate 3 -->
                     <div class="cert-card" data-scroll data-scroll-speed="2">
                         <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-                        <h3>Responsive Layout</h3>
-                        <p>LinkedIn Learning</p>
-                        <span class="cert-date">2024</span>
-                        <a href="https://www.linkedin.com/learning/certificates/0dc73609b7bab253bf3335973b39fc108a3f9ab67d234a06dc47dad7894a3cf5?trk=share_certificate" class="cert-link" target="_blank"><i class="fas fa-external-link-alt"></i> View Certificates</a>
+                        <h3>One Million Prompters</h3>
+                        <p>Launched by His Highness Sheikh Hamdan Bin Mohammed Bin Rashid Al Maktoum</p>
+                        <span class="cert-date">2026</span>
+                        <a href="https://pdflink.to/8de20462/" class="cert-link" target="_blank"><i class="fas fa-external-link-alt"></i> View Certificates</a>
                     </div>
                 </div>
             </div>
@@ -2143,6 +2158,22 @@
                 icon: "fa-award",
                 date: "2025",
                 link: "https://img.sanishtech.com/u/027226364e3be023d75dc4451fce057e.png", 
+                linkText: "View Certificate"
+            },
+            {
+                title: "One Million Prompters",
+                description: "Launched by His Highness Sheikh Hamdan Bin Mohammed Bin Rashid Al Maktoum",
+                icon: "fa-award",
+                date: "2026",
+                link: "https://pdflink.to/8de20462/", 
+                linkText: "View Certificate"
+            },
+            {
+                title: "Design Principles, Typography & Color Theory in 1 MegaCourse",
+                description: "U demy",
+                icon: "fa-award",
+                date: "2026",
+                link: "https://pdflink.to/b60ac2f6/", 
                 linkText: "View Certificate"
             },
             {
