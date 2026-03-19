@@ -118,6 +118,7 @@
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             position: relative;
             overflow: hidden;
+            min-height: 100vh;
         }
 
         .parallax-bg {
@@ -283,6 +284,8 @@
             display: flex;
             gap: 1.5rem;
             margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
         .social-icon {
@@ -314,22 +317,27 @@
         .social-icon:hover i {
             transform: scale(1.1);
         }
-        .resume{
+        
+        .resume {
             font-size: 1.1rem;
-            color: #940b0b;
+            color: #ffffff;
             margin-top: 15px;
-            font-weight: 800;
-        }
-        .resume:hover {
-            color: #AD463E;
-            
+            font-weight: 500;
+            text-decoration: none;
             transition: all 0.3s ease;
         }
+        
+        .resume:hover {
+            color: #AD463E;
+        }
+
+        /* Hero image */
         .hero-image {
             position: relative;
             width: 100%;
             max-width: 400px;
             margin: 0 auto;
+            transform: translateY(-20px);
         }
 
         .image-container {
@@ -405,6 +413,7 @@
             margin-bottom: 1rem;
             color: #fff;
             font-size: 0.9rem;
+            flex-wrap: wrap;
         }
 
         .location-header i {
@@ -458,7 +467,7 @@
             margin-bottom: 2rem;
         }
 
-        /* UPDATED EXPERIENCE SECTION */
+        /* EXPERIENCE SECTION */
         #experience {
             background: #0a0a0a;
             position: relative;
@@ -547,16 +556,28 @@
             color: #AD463E;
             margin-bottom: 1.2rem;
             font-weight: 500;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
+
         .exp-date a {
             color: #ffffff;
             text-decoration: none;
             font-weight: 600;
-            margin-left: 11rem;
-            font-size: 1rem;
+            font-size: 0.85rem;
+            padding: 0.2rem 0.8rem;
+            background: rgba(173, 70, 62, 0.2);
+            border-radius: 50px;
+            transition: all 0.3s ease;
         }
-        .exp-date #feb{
-            margin-left: 15.5rem;
+
+        .exp-date a:hover {
+            background: #AD463E;
+            color: white;
         }
 
         .exp-description {
@@ -677,12 +698,14 @@
             font-weight: 500;
         }
 
-        /* SEE MORE BUTTON STYLES */
+        /* SEE MORE BUTTON STYLE */
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .section-header .section-title {
@@ -919,6 +942,7 @@
             display: flex;
             gap: 1rem;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .project-link {
@@ -1102,7 +1126,7 @@
             font-size: 0.95rem;
         }
 
-        /* CONTACT SECTION */
+        /*  CONTACT SECTION */
         #contact {
             background: #0a0a0a;
         }
@@ -1131,6 +1155,7 @@
             background: rgba(255,255,255,0.02);
             border-radius: 15px;
             transition: all 0.3s ease;
+            flex-wrap: wrap;
         }
 
         .contact-item:hover {
@@ -1147,13 +1172,23 @@
             align-items: center;
             justify-content: center;
             color: #AD463E;
+            flex-shrink: 0;
         }
-        .contact-form{
-            margin-top: 5rem;
-            h3{
-                margin-bottom: 1rem;
-            }
+
+        .contact-item span {
+            word-break: break-word;
+            flex: 1;
         }
+
+        .contact-form {
+            margin-top: 0;
+        }
+        
+        .contact-form h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
         .contact-form input,
         .contact-form textarea {
             width: 100%;
@@ -1193,7 +1228,7 @@
             box-shadow: 0 10px 20px rgba(173, 70, 62, 0.3);
         }
 
-        /* responsive */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 968px) {
             .hero-grid {
                 grid-template-columns: 1fr;
@@ -1202,10 +1237,14 @@
 
             .hero-image {
                 order: -1;
+                transform: translateY(0);
+                margin-bottom: 2rem;
             }
 
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
             }
 
             nav ul {
@@ -1218,7 +1257,6 @@
 
             .section-header {
                 flex-direction: column;
-                gap: 1rem;
                 align-items: flex-start;
             }
 
@@ -1236,12 +1274,66 @@
                 padding: 4rem 1rem;
             }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
+            .hero-grid {
+                gap: 1rem;
+            }
+
+            .hero-info h1 {
+                font-size: clamp(3rem, 6vw, 4rem);
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+                margin-top: 1rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-highlights {
+                flex-wrap: wrap;
+                gap: 1rem;
             }
 
             .social-icons {
                 justify-content: center;
+            }
+
+            .projects-grid,
+            .certificates-grid,
+            .hobbies-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .contact-info h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .contact-form h3 {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .contact-item {
+                padding: 0.8rem;
+            }
+
+            .contact-item i {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            .contact-item span {
+                font-size: 0.9rem;
             }
 
             .modal {
@@ -1259,6 +1351,52 @@
             .see-more-btn {
                 padding: 0.6rem 1rem;
                 font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-info h1 {
+                font-size: clamp(2.5rem, 5vw, 3rem);
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .highlight-item {
+                width: 100%;
+            }
+
+            .social-icons {
+                gap: 1rem;
+            }
+
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+
+            .resume {
+                font-size: 1rem;
+                margin-top: 10px;
+            }
+
+            .location-badge {
+                padding: 1rem;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-item i {
+                margin-bottom: 0.5rem;
+            }
+
+            .contact-form button {
+                padding: 0.8rem;
             }
         }
     </style>
@@ -1334,7 +1472,8 @@
                             <a href="https://www.instagram.com/aree.shh055/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
                             <a href="https://github.com/ayisha33mannan" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/ayisha-mannan" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon" download ><i class="fa-solid fa-download"></i></a> <span class="resume">Download Resume </span>
+                            <a href="#" class="social-icon" download ><i class="fa-solid fa-download"></i></a> 
+                            <span class="resume">Download Resume</span>
                         </div>
 
                         <div class="location-badge" data-scroll data-scroll-speed="0.5">
@@ -1378,7 +1517,7 @@
             </div>
         </section>
 
-        <!-- UPDATED EXPERIENCE SECTION -->
+        <!-- EXPERIENCE SECTION -->
         <section id="experience" data-scroll-section>
             <div class="container">
                 <span class="skills-subtitle" data-scroll data-scroll-speed="0.5">my journey</span>
@@ -1394,7 +1533,7 @@
                                 <div class="exp-company">The Oasis by Emaar</div>
                             </div>
                         </div>
-                        <div class="exp-date">Mar 2025 - May 2025          <a href="https://theoasis-properties.vercel.app/" target="_blank">link</a></div>  
+                        <div class="exp-date">Mar 2025 - May 2025 <a href="https://theoasis-properties.vercel.app/" target="_blank">link</a></div>  
                         <div class="exp-description">
                             <p><i class="fas fa-circle" style="font-size: 0.4rem; margin-right: 0.5rem;"></i> Collaborated on UX/UI design to match client expectations and user flow.</p>
                             <p><i class="fas fa-circle" style="font-size: 0.4rem; margin-right: 0.5rem;"></i> Contributed to layout, content structure, and aesthetic direction.</p>
@@ -1471,7 +1610,7 @@
                                 <div class="exp-company">Google Developer Groups</div>
                             </div>
                         </div>
-                        <div class="exp-date">Feb 2026    <a id="feb" href="https://img.sanishtech.com/u/e252ab72d25ebebe571b5e7e6235e055.png" target="_blank">link</a></div>
+                        <div class="exp-date">Feb 2026 <a href="https://img.sanishtech.com/u/e252ab72d25ebebe571b5e7e6235e055.png" target="_blank">link</a></div>
                         <div class="exp-description">
                             <p><i class="fas fa-circle" style="font-size: 0.4rem; margin-right: 0.5rem;"></i> Assisted in organizing and facilitating workshops on web development and AI tools for university students.</p>
                         </div>
@@ -1743,7 +1882,7 @@
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
+        <!-- CONTACT SECTION + RESPONSIVE -->
         <section id="contact" data-scroll-section>
             <div class="container">
                 <h2 class="section-title" data-scroll data-scroll-speed="1">Let's connect</h2>
@@ -1756,11 +1895,11 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>+971 544286175</span>
+                            <span>+0987654321</span>
                         </div>
                         <div class="contact-item">
                             <i class="fa-brands fa-whatsapp"></i>
-                            <span>+971 501774980</span>
+                            <span>+123 456 7890</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -1856,7 +1995,7 @@
             pinType: document.querySelector('[data-scroll-container]').style.transform ? 'transform' : 'fixed'
         });
 
-        // Map with your specific location
+        // Map with location
         function initMap() {
             const lat = 25.3645565;
             const lon = 55.3983087;
